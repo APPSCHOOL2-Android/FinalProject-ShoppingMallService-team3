@@ -51,19 +51,22 @@
                 android:layout_marginTop="10dp"
                 android:text="날짜" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerViewOrderDetail"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_weight="30"
-                 />
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingTop="20dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewOrderDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:orientation="horizontal">
 
                 <Button
@@ -116,7 +119,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="3"
-                        android:text="수령인 : " />
+                        android:text="수령인 " />
 
                     <TextView
                         android:id="@+id/textViewOrderDetailReceiverName2"
@@ -137,7 +140,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="3"
-                        android:text="연락처 : " />
+                        android:text="연락처 " />
 
                     <TextView
                         android:id="@+id/textViewOrderDetailReceiverContact2"
@@ -158,7 +161,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="3"
-                        android:text="배송지 : " />
+                        android:text="배송지 " />
 
                     <TextView
                         android:id="@+id/textViewOrderAddress2"
@@ -175,18 +178,17 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/textViewOrderDetailMessage"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="3"
-                        android:text="전달 메세지 : " />
-
-                    <TextView
                         android:id="@+id/textViewOrderDetailMessage2"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="7"
-                        android:text="안전하게 배송해주세요" />
+                        android:layout_weight="3"
+                        android:text="배송 메세지 선택 " />
+
+                    <TextView
+                        android:id="@+id/textViewOrderDetailMessage"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="7" />
 
                 </LinearLayout>
 
@@ -224,7 +226,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="3"
-                        android:text="상품금액 : " />
+                        android:text="상품금액 " />
 
                     <TextView
                         android:id="@+id/textViewOrderDetailPrice2"
@@ -246,7 +248,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="3"
-                        android:text="카드번호 : " />
+                        android:text="결제 방법 " />
 
                     <TextView
                         android:id="@+id/textViewOrderDetailPayment2"
@@ -267,7 +269,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="3"
-                        android:text="총 결제비용 : " />
+                        android:text="총 결제비용 " />
 
                     <TextView
                         android:id="@+id/textViewOrderDetailPaid2"
