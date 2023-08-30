@@ -13,6 +13,7 @@ import androidx.navigation.NavController
 import androidx.navigation.NavOptions
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
+import com.google.firebase.auth.FirebaseAuth
 import com.petpal.swimmer_customer.R
 import com.petpal.swimmer_customer.databinding.FragmentMainBinding
 import com.petpal.swimmer_customer.util.AutoLoginUtil
@@ -34,7 +35,7 @@ class MainFragment : Fragment() {
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when (destination.id) {
-               R.id.MainFragment, R.id.LoginFragment, R.id.RegisterFragment, R.id.FindInfoFragment,R.id.DetailAddressFragment,R.id.AddressDialogFragment -> {
+               R.id.MainFragment, R.id.LoginFragment, R.id.RegisterFragment, R.id.FindInfoFragment -> {
                     fragmentMainBinding.bottomNavigation.visibility = View.GONE
                 }
                 else -> {
@@ -120,7 +121,6 @@ class MainFragment : Fragment() {
     }
     private fun autoLogin(){
         val isAutoLogin = AutoLoginUtil.getAutoLogin(requireContext())
-
         if (!isAutoLogin) {
             navController.navigate(R.id.LoginFragment)
         }else{

@@ -167,6 +167,15 @@
         android:text="카카오로 시작하기"
         app:icon="@drawable/kakaospare_24px"
         app:iconGravity="textStart" />
+
+    <TextView
+        android:id="@+id/textViewCopyrightVerison"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="240dp"
+        android:layout_marginTop="10dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textSize="10sp" />
     <!--        android:drawableLeft="@drawable/ic_launcher_background"-->
     <!--        android:drawablePadding="8dp"/>-->
 

@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.map
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.google.firebase.storage.FirebaseStorage
 import com.petpal.swimmer_customer.R
 import com.petpal.swimmer_customer.data.model.Product
@@ -67,10 +68,9 @@ class ProductViewModel() : ViewModel() {
         pathRef.downloadUrl.addOnSuccessListener {
             Glide.with(imageView.context)
                 .load(it)
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .transition(DrawableTransitionOptions.withCrossFade())
                 .centerCrop()
-                .diskCacheStrategy(DiskCacheStrategy.NONE)
-                .centerCrop()
-                .override(420,1500)
                 .error(R.drawable.noimg)
                 .into(imageView)
         }

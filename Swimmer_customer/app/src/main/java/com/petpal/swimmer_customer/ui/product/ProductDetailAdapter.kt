@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.google.firebase.storage.FirebaseStorage
 import com.petpal.swimmer_customer.R
 import com.petpal.swimmer_customer.data.model.ProductDetailModel
@@ -53,8 +54,10 @@ class ProductDetailAdapter(private val context: Context, private val imagePaths:
         pathRef.downloadUrl.addOnSuccessListener {
             Glide.with(context)
                 .load(it)
-                .diskCacheStrategy(DiskCacheStrategy.NONE)
-                .centerCrop()
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .transition(DrawableTransitionOptions.withCrossFade())
+                .error(R.drawable.noimg)
+                .fitCenter()
                 .into(imageView)
         }
     }

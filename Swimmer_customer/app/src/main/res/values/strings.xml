@@ -96,6 +96,7 @@
     <string name="modify_nickname_failure">닉네임 수정에 실패했습니다.</string>
     <string name="modfiy_phone_success">휴대폰 번호가 수정되었습니다.</string>
     <string name="modfiy_phone_failure">휴대폰 번호 수정에 실패했습니다.</string>
+    <string name="copyright_and_version">&#169; 2023 멋사. 개발 팀: 3팀 | v1.0.0</string>
 
     <string name="bottom_sheet_149_cm">149 cm 이하</string>
     <string name="bottom_sheet_150_152_cm">150 ~ 152 cm</string>
