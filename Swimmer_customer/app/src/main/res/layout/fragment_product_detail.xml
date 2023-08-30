@@ -58,7 +58,7 @@
                     <FrameLayout
                         android:id="@+id/viewPager2Container"
                         android:layout_width="0dp"
-                        android:layout_height="300dp"
+                        android:layout_height="400dp"
                         app:layout_constraintBottom_toTopOf="@+id/imageView"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"

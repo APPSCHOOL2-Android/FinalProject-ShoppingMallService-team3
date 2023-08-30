@@ -18,6 +18,7 @@ import android.widget.TextView
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.TooltipCompat
 import androidx.core.widget.addTextChangedListener
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
@@ -67,6 +68,7 @@ class ProductAddFragment : Fragment() {
     ): View? {
         _fragmentProductAddBinding = FragmentProductAddBinding.inflate(inflater)
         mainActivity = activity as MainActivity
+
         return fragmentProductAddBinding.root
     }
 
@@ -85,6 +87,9 @@ class ProductAddFragment : Fragment() {
         addHashTagList.clear()
 
         fragmentProductAddBinding.run {
+            TooltipCompat.setTooltipText(infoIconMain, getString(R.string.tooltip_main_image))
+            TooltipCompat.setTooltipText(infoIconDescription, getString(R.string.tooltip_description_image))
+
             toolbarProductAdd.setNavigationOnClickListener {
                 findNavController().popBackStack()
             }
@@ -168,7 +173,7 @@ class ProductAddFragment : Fragment() {
             }
 
             // 해시태그 Chip 추가
-            textInputEditTextHashTag.setOnEditorActionListener { v, actionId, event ->
+            textInputEditTextHashTag.setOnEditorActionListener { _, _, _ ->
                 addHashTag()
                 true
             }
@@ -321,8 +326,7 @@ class ProductAddFragment : Fragment() {
             false
         }
     }
-    
-    // TODO 이미지 처리 Glide 라이브러리로 수정하기
+
     // 메인 이미지 갤러리 설정
     private fun mainImageGallerySetting(): ActivityResultLauncher<Intent>{
         val galleryLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {

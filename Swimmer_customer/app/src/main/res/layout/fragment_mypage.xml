@@ -70,7 +70,7 @@
                         <TextView
                             android:id="@+id/buttonModifyInfo"
                             style="@style/TextAppearance.Material3.LabelLarge"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
                             android:text="내 정보 수정"
@@ -263,7 +263,7 @@
 
             <TextView
                 android:id="@+id/buttonDeliveryPointManage"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="49dp"
                 android:layout_marginTop="8dp"
                 android:gravity="center_vertical"
@@ -273,7 +273,7 @@
 
             <TextView
                 android:id="@+id/buttonLogOut"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="49dp"
                 android:layout_marginTop="8dp"
                 android:gravity="center_vertical"
@@ -293,7 +293,7 @@
 
                 <TextView
                     android:id="@+id/buttonNotice"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="49dp"
                     android:layout_marginTop="8dp"
                     android:gravity="center_vertical"
@@ -302,7 +302,7 @@
 
                 <TextView
                     android:id="@+id/buttonFAQ"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="49dp"
                     android:layout_marginTop="8dp"
                     android:gravity="center_vertical"
@@ -311,7 +311,7 @@
 
                 <TextView
                     android:id="@+id/buttonShowMyInquiry"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="49dp"
                     android:layout_marginTop="8dp"
                     android:gravity="center_vertical"
