@@ -63,8 +63,8 @@ class OrderDetailFragment : Fragment() {
         orderViewModel.run {
             customer.observe(viewLifecycleOwner) {
                 fragmentOrderDetailBinding.run {
-                    textViewOrderDetailReceiverName.text = it.name
-                    textViewOrderDetailReceiverContact.text = it.contact
+                    textViewOrderDetailReceiverName2.text = it.name
+                    textViewOrderDetailReceiverContact2.text = it.contact
                 }
             }
             order.observe(viewLifecycleOwner) {
@@ -74,13 +74,13 @@ class OrderDetailFragment : Fragment() {
                 fragmentOrderDetailBinding.textViewOrderDetailNum.text = it.orderUid
                 fragmentOrderDetailBinding.textViewOrderDetailDate.text = it.orderDate
 
-                fragmentOrderDetailBinding.textViewOrderAddress.text = it.address
+                fragmentOrderDetailBinding.textViewOrderAddress2.text = it.address
                 fragmentOrderDetailBinding.textViewOrderDetailMessage.text = it.message
 
-                fragmentOrderDetailBinding.textViewOrderDetailPrice.text = it.totalPrice.toString()
-                fragmentOrderDetailBinding.textViewOrderDetailPayment.text =
+                fragmentOrderDetailBinding.textViewOrderDetailPrice2.text = it.totalPrice.toString()
+                fragmentOrderDetailBinding.textViewOrderDetailPayment2.text =
                     getPaymentMethod(it.payMethod).str
-                fragmentOrderDetailBinding.textViewOrderDetailPaid.text = it.totalPrice.toString()
+                fragmentOrderDetailBinding.textViewOrderDetailPaid2.text = it.totalPrice.toString()
 
                 when (getOrderState(it.state)) {
                     OrderState.PAYMENT -> {
