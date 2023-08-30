@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Swimmer_seller</string>
     <!-- Strings related to login -->
+    <string name="copyright_and_version">&#169; 2023 멋사. 개발 팀: 3팀 | v1.0.0</string>
     <string name="prompt_email">이메일</string>
     <string name="prompt_password">비밀번호</string>
     <string name="prompt_password_confirm">비밀번호 확인</string>

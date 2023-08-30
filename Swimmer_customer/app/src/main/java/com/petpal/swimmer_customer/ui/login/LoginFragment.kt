@@ -107,6 +107,7 @@ class LoginFragment : Fragment() {
         return true
     }
     private fun setupUI(){
+        fragmentLoginBinding.textViewCopyrightVerison.text=getString(R.string.copyright_and_version)
         fragmentLoginBinding.ButtonLogin.setOnClickListener {
             val email = fragmentLoginBinding.textInputEditTextLoginEmail.text.toString()
             val password = fragmentLoginBinding.textInputEditTextLoginPassword.text.toString()
