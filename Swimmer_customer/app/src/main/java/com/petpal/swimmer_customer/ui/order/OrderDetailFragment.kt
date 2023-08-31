@@ -149,7 +149,7 @@ class OrderDetailFragment : Fragment() {
         }
 
         override fun getItemCount(): Int {
-            return orderViewModel.order.value!!.itemList.size
+            return orderViewModel.order.value?.itemList?.size ?: 0
         }
 
         override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
